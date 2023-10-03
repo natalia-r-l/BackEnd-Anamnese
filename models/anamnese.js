@@ -8,5 +8,9 @@ module.exports = class Anamnese {
     static find(dentista){
         return db.execute('SELECT * FROM anm_anamnese WHERE dentista = ?', [dentista]);
     }
+
+    static fetchAll(){
+        return db.execute('SELECT * FROM anm_anamnese');
+    }
 };
 
