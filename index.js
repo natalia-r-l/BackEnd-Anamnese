@@ -2,11 +2,11 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 
-const authRoutes = require('./routes/auth');
+const authRoutes = require('./routes/authRoute');
 
 const anamneseRoute = require('./routes/anmneseRoute')
 
-const errorController = require('./controllers/error');
+const errorController = require('./controllers/errorController');
 
 const app = express();
 
