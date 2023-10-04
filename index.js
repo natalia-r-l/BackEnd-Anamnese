@@ -8,6 +8,8 @@ const anamneseRoute = require('./routes/anmneseRoute');
 
 const perguntasRoute = require('./routes/perguntasRoute');
 
+const respostasRoute = require('./routes/respostasRoute');
+
 const errorController = require('./controllers/errorController');
 
 const app = express();
@@ -28,6 +30,8 @@ app.use('/auth', authRoutes);
 app.use('/anamneses', anamneseRoute);
 
 app.use('/perguntas', perguntasRoute);
+
+app.use('/respostas', respostasRoute);
 
 app.use(errorController.get404);
 
