@@ -17,9 +17,9 @@ exports.fetchAll = async (req, res, next) => {
 
 }
 
-exports.fetchAnamnese = async (req, res, next) => {
+exports.findAnamnese = async (req, res, next) => {
     try {
-      const listAnamnsese = await Anamnese.find(req.params.dentista);
+      const listAnamnsese = await Anamnese.findAnamnese(req.body.dentista);
       res.status(200).json(listAnamnsese);
     } catch (err) {
       if (!err.statusCode) {
