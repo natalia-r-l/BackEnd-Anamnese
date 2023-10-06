@@ -6,6 +6,8 @@ const authRoutes = require('./routes/authRoute');
 
 const anamneseRoute = require('./routes/anmneseRoute');
 
+const anamneseDetails = require('./routes/anamneseDetailsRoute');
+
 const errorController = require('./controllers/errorController');
 
 const app = express();
@@ -24,6 +26,8 @@ app.use((req, res, next) => {
 app.use('/auth', authRoutes);
 
 app.use('/anamneses', anamneseRoute);
+
+app.use('/anamneseDetails', anamneseDetails);
 
 app.use(errorController.get404);
 

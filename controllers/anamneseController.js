@@ -1,5 +1,3 @@
-const { validationResult } = require('express-validator');
-
 const Anamnese = require('../models/anamnese');
 
 exports.findAnamnese = async (req, res, next) => {
