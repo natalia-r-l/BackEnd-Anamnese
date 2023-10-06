@@ -2,6 +2,7 @@ const { validationResult } = require('express-validator');
 
 const Anamnese = require('../models/anamnese');
 
+
 exports.fetchAll = async (req, res, next) => {
 
     try{
