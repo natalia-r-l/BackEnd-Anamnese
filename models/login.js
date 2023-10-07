@@ -2,7 +2,7 @@ const db = require('../util/database');
 
 module.exports = class Login {
     constructor(dentista){        
-        this.dentista = dentista;       
+        this.dentista = dentista; 
     }
 
     static loginDentista(dentista){
