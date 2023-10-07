@@ -5,7 +5,7 @@ module.exports = class Anamnese {
         this.dentista = dentista;       
     }
 
-    static find(dentista){
+    static loginDentista(dentista){
         return db.execute('SELECT * FROM anm_anamnese WHERE dentista = ?', [dentista]);
     }
 

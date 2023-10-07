@@ -9,7 +9,7 @@ exports.login = async(req,res,next) => {
     const dentista = req.body.dentista;    
 
     try{        
-        const anamnese = await Anamnese.find(dentista);
+        const anamnese = await Anamnese.loginDentista(dentista);
 
         if(anamnese[0].length < 1) {
             const error = new Error('Dentista não encontrado!');
