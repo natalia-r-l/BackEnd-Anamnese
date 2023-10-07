@@ -2,14 +2,14 @@ const { validationResult } = require('express-validator');
 
 const jwt = require ('jsonwebtoken');
 
-const Anamnese = require('../models/anamnese');
+const Login = require('../models/login');
 
 exports.login = async(req,res,next) => {
 
     const dentista = req.body.dentista;    
 
     try{        
-        const anamnese = await Anamnese.loginDentista(dentista);
+        const anamnese = await Login.loginDentista(dentista);
 
         if(anamnese[0].length < 1) {
             const error = new Error('Dentista não encontrado!');
